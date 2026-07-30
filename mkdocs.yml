@@ -1,0 +1,5 @@
+site_name: Skapersøk docs
+site_url: https://docs.skapersok.no
+
+theme:
+  name: material

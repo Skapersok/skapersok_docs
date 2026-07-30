@@ -1,0 +1,2448 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.skapersok.no/APIReference/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../Backups/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>API Reference - Skapersøk docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Skapersøk docs" class="md-header__button md-logo" aria-label="Skapersøk docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Skapersøk docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Skapersøk docs" class="md-nav__button md-logo" aria-label="Skapersøk docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Skapersøk docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome to MkDocs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#base-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Base URL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-authlogin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /auth/login
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-authauthorized" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /auth/authorized
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-userscreate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /users/create
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put-usersupdate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PUT /users/update
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-usersremove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELETE /users/remove
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-usersgetall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /users/get/all
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-usersgetme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /users/get/me
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#item-and-hierarchy-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Item and hierarchy routes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Item and hierarchy routes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-getroot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /get/root
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /get
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-getchildren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /get/children
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-getchildrenroot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /get/children/root
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-getall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /get/all
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /search
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-trail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /trail
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-has_children" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /has_children
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#item-mutation-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Item mutation routes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Item mutation routes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /add
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELETE /remove
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put-updateroot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PUT /update/root
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PUT /update
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Image routes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Image routes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-descimageroot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /descimage/root
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-mapimageroot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /mapimage/root
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-descimage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /descimage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-mapimage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /mapimage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utility-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Utility routes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utility routes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /id
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-ping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /ping
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backup-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup routes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backup routes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-backupsgetall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /backups/get/all
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-backupsdump" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /backups/dump
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-backupsschedule_restore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /backups/schedule_restore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-backupsremove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELETE /backups/remove
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings routes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings routes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-settingsget" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /settings/get
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put-settingsupdate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PUT /settings/update
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PUT /settings/update">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get_siblingsplacement_code-listdict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_siblings(placement_code) -&gt; list[dict]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is_leafplacement_code-bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        is_leaf(placement_code) -&gt; bool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searchquery-only_leaves-max_results-skip_number0-listdict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        search(query, only_leaves, max_results, skip_number=0) -&gt; list[dict]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Image Operations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Image Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verify_placement_code_syntaxplacement_code-bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        verify_placement_code_syntax(placement_code) -&gt; bool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map_image_pathplacement_code-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        map_image_path(placement_code) -&gt; Path
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment Variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-implementation-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices &amp; Implementation Guide
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices &amp; Implementation Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-expiration-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Token Expiration Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hierarchy-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hierarchy Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Image Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-timeout-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection &amp; Timeout Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Tips
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-server-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Server Deployment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Models
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inholder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inholder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permission-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permission System
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Backups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup system
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DatabaseLayout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database layout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DatabaseSetup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gridsystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grid and placement layout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JoinLinks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Info
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PlacementCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Placement code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProjectStructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Structure &amp; Development Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#base-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Base URL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-authlogin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /auth/login
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-authauthorized" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /auth/authorized
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-userscreate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /users/create
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put-usersupdate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PUT /users/update
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-usersremove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELETE /users/remove
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-usersgetall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /users/get/all
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-usersgetme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /users/get/me
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#item-and-hierarchy-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Item and hierarchy routes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Item and hierarchy routes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-getroot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /get/root
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /get
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-getchildren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /get/children
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-getchildrenroot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /get/children/root
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-getall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /get/all
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /search
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-trail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /trail
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-has_children" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /has_children
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#item-mutation-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Item mutation routes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Item mutation routes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /add
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELETE /remove
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put-updateroot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PUT /update/root
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PUT /update
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Image routes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Image routes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-descimageroot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /descimage/root
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-mapimageroot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /mapimage/root
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-descimage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /descimage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-mapimage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /mapimage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utility-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Utility routes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utility routes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /id
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-ping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /ping
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backup-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup routes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backup routes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-backupsgetall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /backups/get/all
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-backupsdump" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /backups/dump
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-backupsschedule_restore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /backups/schedule_restore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-backupsremove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELETE /backups/remove
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings routes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings routes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-settingsget" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /settings/get
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put-settingsupdate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PUT /settings/update
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PUT /settings/update">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get_siblingsplacement_code-listdict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_siblings(placement_code) -&gt; list[dict]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is_leafplacement_code-bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        is_leaf(placement_code) -&gt; bool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searchquery-only_leaves-max_results-skip_number0-listdict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        search(query, only_leaves, max_results, skip_number=0) -&gt; list[dict]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Image Operations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Image Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verify_placement_code_syntaxplacement_code-bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        verify_placement_code_syntax(placement_code) -&gt; bool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map_image_pathplacement_code-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        map_image_path(placement_code) -&gt; Path
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment Variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-implementation-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices &amp; Implementation Guide
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices &amp; Implementation Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-expiration-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Token Expiration Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hierarchy-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hierarchy Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Image Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-timeout-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection &amp; Timeout Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Tips
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-server-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Server Deployment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Models
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inholder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inholder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permission-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permission System
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="api-reference">API Reference</h1>
+<p>This document summarizes the FastAPI endpoints exposed by the backend.</p>
+<h2 id="base-url">Base URL</h2>
+<p>By default the server runs at <a href="http://127.0.0.1:5000">http://127.0.0.1:5000</a>. The convenience script uses port 5000.</p>
+<h2 id="authentication">Authentication</h2>
+<p>Most mutating routes require authentication using a bearer token. The token is issued by /auth/login and should be sent as:</p>
+<pre><code class="language-http">Authorization: Bearer &lt;token&gt;
+</code></pre>
+<h3 id="post-authlogin">POST /auth/login</h3>
+<p>Authenticate a user and receive an access token.</p>
+<p>Request body must use form fields:</p>
+<pre><code class="language-text">username=&lt;username&gt;
+password=&lt;password&gt;
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">curl -X POST http://127.0.0.1:5000/auth/login \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -d 'username=admin&amp;password=secret'
+</code></pre>
+<p>Response:</p>
+<pre><code class="language-json">{&quot;access_token&quot;:&quot;...&quot;,&quot;token_type&quot;:&quot;bearer&quot;}
+</code></pre>
+<h3 id="get-authauthorized">GET /auth/authorized</h3>
+<p>Validates the current access token.</p>
+<h2 id="user-management">User management</h2>
+<h3 id="post-userscreate">POST /users/create</h3>
+<p>Create a user. Requires admin role.</p>
+<p>Form fields: username, password, role.</p>
+<h3 id="put-usersupdate">PUT /users/update</h3>
+<p>Update a user password or role. Requires admin role.</p>
+<h3 id="delete-usersremove">DELETE /users/remove</h3>
+<p>Remove a user. Requires admin role.</p>
+<h3 id="get-usersgetall">GET /users/get/all</h3>
+<p>List all users. Requires admin role.</p>
+<h3 id="get-usersgetme">GET /users/get/me</h3>
+<p>Get the current authenticated user profile.</p>
+<h2 id="item-and-hierarchy-routes">Item and hierarchy routes</h2>
+<h3 id="get-getroot">GET /get/root</h3>
+<p>Get the root item. The root uses the empty placement code "".</p>
+<h3 id="get-get">GET /get</h3>
+<p>Get an item by placement code.</p>
+<p>Example:</p>
+<pre><code class="language-bash">curl http://127.0.0.1:5000/get?code=A
+</code></pre>
+<h3 id="get-getchildren">GET /get/children</h3>
+<p>List child items for a parent placement code.</p>
+<p>Example:</p>
+<pre><code class="language-bash">curl http://127.0.0.1:5000/get/children?code=A
+</code></pre>
+<h3 id="get-getchildrenroot">GET /get/children/root</h3>
+<p>List the root's child items.</p>
+<h3 id="get-getall">GET /get/all</h3>
+<p>Return all items. Add only_leaves=true to return only leaf nodes.</p>
+<h3 id="get-search">GET /search</h3>
+<p>Search items by text.</p>
+<p>Common query parameters:</p>
+<ul>
+<li>q: search string</li>
+<li>max_results: maximum number of results</li>
+<li>skip_number: offset for pagination</li>
+<li>only_leaves: only return leaves</li>
+<li>info_level: 0 for full item details, 1 for basic fields</li>
+</ul>
+<h3 id="get-trail">GET /trail</h3>
+<p>Return the breadcrumb trail for a placement code.</p>
+<h3 id="get-has_children">GET /has_children</h3>
+<p>Check whether a placement code has children.</p>
+<h2 id="item-mutation-routes">Item mutation routes</h2>
+<h3 id="post-add">POST /add</h3>
+<p>Create a new item. Requires admin or maintainer role.</p>
+<p>Form fields include placement_code, name, description, keywords, children_arrangement, self_alignment, color, map_image, and desc_image.</p>
+<h3 id="delete-remove">DELETE /remove</h3>
+<p>Delete one or more items. The form field codes accepts a list of placement codes. Requires admin or maintainer role.</p>
+<h3 id="put-updateroot">PUT /update/root</h3>
+<p>Update the root item. Requires admin, maintainer, or editor role.</p>
+<h3 id="put-update">PUT /update</h3>
+<p>Update an item by placement code. Requires admin, maintainer, or editor role.</p>
+<h2 id="image-routes">Image routes</h2>
+<h3 id="get-descimageroot">GET /descimage/root</h3>
+<p>Get the description image for the root item.</p>
+<h3 id="get-mapimageroot">GET /mapimage/root</h3>
+<p>Get the map image for the root item.</p>
+<h3 id="get-descimage">GET /descimage</h3>
+<p>Get the description image for a specific placement code.</p>
+<h3 id="get-mapimage">GET /mapimage</h3>
+<p>Get the map image for a specific placement code.</p>
+<h2 id="utility-routes">Utility routes</h2>
+<h3 id="get-id">GET /id</h3>
+<p>Return the server identifier.</p>
+<h3 id="get-ping">GET /ping</h3>
+<p>Health check endpoint.</p>
+<h2 id="backup-routes">Backup routes</h2>
+<h3 id="get-backupsgetall">GET /backups/get/all</h3>
+<p>List available backups. Requires admin role.</p>
+<h3 id="post-backupsdump">POST /backups/dump</h3>
+<p>Create a new backup immediately. Requires admin role.</p>
+<h3 id="post-backupsschedule_restore">POST /backups/schedule_restore</h3>
+<p>Schedule a restore from a backup ID. Requires admin role. The restore is applied on the next startup.</p>
+<h3 id="delete-backupsremove">DELETE /backups/remove</h3>
+<p>Delete a backup archive. Requires admin role.</p>
+<h2 id="settings-routes">Settings routes</h2>
+<h3 id="get-settingsget">GET /settings/get</h3>
+<p>Read a setting by ID.</p>
+<h3 id="put-settingsupdate">PUT /settings/update</h3>
+<p>Update settings such as image_quality, max_backups_size, and backup_interval_seconds. Requires admin role.</p>
+<h4 id="get_siblingsplacement_code-listdict"><code>get_siblings(placement_code) -&gt; list[dict]</code></h4>
+<p>Get sibling inholders at the same hierarchical level.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>placement_code</code> (str) - The placement code</li>
+</ul>
+<p><strong>Returns:</strong> List of inholder dictionaries at the same depth, excluding the node itself</p>
+<hr />
+<h4 id="is_leafplacement_code-bool"><code>is_leaf(placement_code) -&gt; bool</code></h4>
+<p>Check if an inholder has no children.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>placement_code</code> (str) - The placement code</li>
+</ul>
+<p><strong>Returns:</strong> <code>True</code> if leaf node (no children), <code>False</code> otherwise</p>
+<hr />
+<h4 id="searchquery-only_leaves-max_results-skip_number0-listdict"><code>search(query, only_leaves, max_results, skip_number=0) -&gt; list[dict]</code></h4>
+<p>Perform fuzzy search on inholders.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>query</code> (str) - Search query</li>
+<li><code>only_leaves</code> (bool) - If <code>True</code>, only return leaf nodes</li>
+<li><code>max_results</code> (int | None) - Maximum results (None for unlimited)</li>
+<li><code>skip_number</code> (int) - Results to skip for pagination</li>
+</ul>
+<p><strong>Returns:</strong> List of matching inholder dictionaries</p>
+<hr />
+<h3 id="image-operations">Image Operations</h3>
+<h4 id="verify_placement_code_syntaxplacement_code-bool"><code>verify_placement_code_syntax(placement_code) -&gt; bool</code></h4>
+<p>Validate placement code format.</p>
+<p><strong>Rules:</strong></p>
+<ul>
+<li>Empty string is valid</li>
+<li>Parts separated by <code>-</code></li>
+<li>Each part must be alphanumeric uppercase ASCII or digits only</li>
+</ul>
+<p><strong>Returns:</strong> <code>True</code> if valid, <code>False</code> otherwise</p>
+<hr />
+<h4 id="map_image_pathplacement_code-path"><code>map_image_path(placement_code) -&gt; Path</code></h4>
+<p>Get the file path for a map image.</p>
+<p><strong>Returns:</strong> Path object</p>
+<p><strong>Missing Request Data (400):</strong></p>
+<ul>
+<li>Required fields not provided (e.g., missing <code>placement_code</code>, <code>name</code> in POST request)</li>
+<li>Query parameters not provided (e.g., missing <code>q</code> in search)</li>
+</ul>
+<p><strong>Invalid Request Data (400):</strong></p>
+<ul>
+<li>Invalid placement code syntax (doesn't match pattern)</li>
+<li>Wrong data type for field (e.g., number where string expected)</li>
+</ul>
+<p><strong>Unauthorized (401):</strong></p>
+<ul>
+<li>No JWT token provided in Authorization header</li>
+<li>JWT token is expired or invalid</li>
+<li>User lacks required permission for the operation</li>
+</ul>
+<p><strong>Not Found (404):</strong></p>
+<ul>
+<li>Placement code doesn't exist in database</li>
+<li>Image file not found for the inholder</li>
+<li>User requested doesn't exist</li>
+</ul>
+<p><strong>Conflict (409):</strong></p>
+<ul>
+<li>Attempting to add inholder that already exists</li>
+<li>Renaming to a placement code that's already in use</li>
+</ul>
+<hr />
+<h2 id="environment-variables">Environment Variables</h2>
+<p>Configuration via <code>.env</code> file (auto-created on first run):</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>JWT_SECRET</code></td>
+<td>(auto-generated)</td>
+<td>Secret key for signing JWT tokens. Auto-generated on first run if not set. Must be kept secret.</td>
+</tr>
+<tr>
+<td><code>ID</code></td>
+<td>(auto-generated)</td>
+<td>Unique server identifier (UUID format). Auto-generated on first run. Used to identify this server instance.</td>
+</tr>
+<tr>
+<td><code>SERVER_NAME</code></td>
+<td>(not set)</td>
+<td>Display name for the server. Used in beacon broadcast.</td>
+</tr>
+<tr>
+<td><code>PORT</code></td>
+<td><code>5000</code></td>
+<td>Server listening port. Change to run multiple instances on different ports.</td>
+</tr>
+<tr>
+<td><code>BACKUP_INTERVAL_SECONDS</code></td>
+<td><code>3600</code></td>
+<td>Time between automatic backups in seconds (default: 1 hour).</td>
+</tr>
+<tr>
+<td><code>BACKUP_FOLDER</code></td>
+<td><code>backups</code></td>
+<td>Directory path for storing backup ZIP files. Created if it doesn't exist.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>The <code>.env</code> file is created in the server working directory on first run</li>
+<li><code>JWT_SECRET</code> is critical for security - keep it confidential</li>
+<li>Changing <code>PORT</code> requires restarting the server</li>
+<li>Backup folder path can be relative or absolute</li>
+</ul>
+<hr />
+<h2 id="best-practices-implementation-guide">Best Practices &amp; Implementation Guide</h2>
+<h3 id="authentication-flow">Authentication Flow</h3>
+<ol>
+<li><strong>Initial Login:</strong> POST <code>/login</code> with username/password to get tokens</li>
+<li><strong>Store Tokens:</strong> Save both <code>access_token</code> (short-lived) and <code>refresh_token</code> (long-lived)</li>
+<li><strong>Use Access Token:</strong> Include access token in Authorization header for regular requests</li>
+<li><strong>Token Refresh:</strong> Before token expires, use <code>refresh_token</code> to get new tokens via POST <code>/refresh</code></li>
+<li><strong>Logout:</strong> Use POST <code>/logout</code> with refresh token to revoke access</li>
+</ol>
+<h3 id="token-expiration-handling">Token Expiration Handling</h3>
+<ul>
+<li><strong>Access tokens expire after 15 minutes</strong> - Client should track expiration time</li>
+<li><strong>Refresh tokens expire after 24 hours</strong> - User must log in again after 24 hours</li>
+<li>Implement automatic token refresh 1 minute before expiration</li>
+<li>On 401 response, attempt refresh; if refresh fails, redirect to login</li>
+</ul>
+<h3 id="search-best-practices">Search Best Practices</h3>
+<ul>
+<li><strong>Use pagination</strong> for large result sets: <code>max_results</code> and <code>skip_number</code></li>
+<li><strong>Cache search results</strong> on client for frequently repeated queries</li>
+<li><strong>Empty query</strong> (<code>q=""</code>) returns all items - consider limiting with <code>max_results</code></li>
+<li><strong>Use <code>only_leaves=true</code></strong> when searching for actual storage locations only</li>
+<li>Fuzzy matching is flexible - typos and partial matches work well</li>
+</ul>
+<h3 id="hierarchy-management">Hierarchy Management</h3>
+<ul>
+<li><strong>Plan your placement code structure</strong> before bulk import</li>
+<li><strong>Parent must exist before child:</strong> Cannot create "A-1-B" if "A-1" doesn't exist</li>
+<li><strong>Use meaningful codes:</strong> "A-1" is better than "TEMP-X" for maintainability</li>
+<li><strong>Breadcrumb navigation:</strong> Use <code>/trail</code> endpoint for UI navigation components</li>
+<li><strong>Recursive delete:</strong> Remember <code>/remove</code> deletes all descendants</li>
+</ul>
+<h3 id="image-handling">Image Handling</h3>
+<ul>
+<li><strong>Supported formats:</strong> PNG, JPEG, HEIC, and most Pillow-supported formats</li>
+<li><strong>Images are converted to WebP</strong> automatically for efficient storage</li>
+<li><strong>Recommended image sizes:</strong></li>
+<li>Map images: 800x600 to 1920x1440 pixels</li>
+<li>Description images: 600x400 to 1024x768 pixels</li>
+<li><strong>Image quality:</strong> Default 85/100 (configurable via <code>IMAGE_QUALITY</code> config)</li>
+<li><strong>Always provide both images</strong> for complete UI experience</li>
+</ul>
+<h3 id="error-handling">Error Handling</h3>
+<pre><code class="language-python"># Example error handling pattern
+import requests
+
+try:
+    response = requests.post('http://localhost:5000/add', 
+        headers={'Authorization': f'Bearer {token}'},
+        json={...})
+
+    if response.status_code == 409:
+        # Inholder already exists
+        handle_conflict()
+    elif response.status_code == 401:
+        # Token expired or permission denied
+        refresh_token_or_login()
+    elif response.status_code == 400:
+        # Invalid data
+        show_validation_error(response.json())
+    else:
+        response.raise_for_status()
+except requests.exceptions.RequestException as e:
+    # Network error
+    handle_network_error(e)
+</code></pre>
+<h3 id="connection-timeout-settings">Connection &amp; Timeout Settings</h3>
+<ul>
+<li><strong>Connection timeout:</strong> Use 5-10 seconds</li>
+<li><strong>Read timeout:</strong> Use 15-30 seconds (allows time for large database operations)</li>
+<li><strong>Retry policy:</strong> Implement exponential backoff for network errors</li>
+<li><strong>Connection pooling:</strong> Reuse connections for multiple requests</li>
+</ul>
+<h3 id="performance-tips">Performance Tips</h3>
+<ul>
+<li><strong>Use <code>/get_children/</code> for tree traversal</strong> instead of loading all items</li>
+<li><strong>Cache inholder data</strong> if not changing frequently</li>
+<li><strong>Batch multiple image uploads</strong> into single requests where possible</li>
+<li><strong>Use <code>skip_number</code> for pagination</strong> rather than filtering results client-side</li>
+<li><strong>Avoid repeated <code>/get_all</code> calls</strong> - cache results with change tracking</li>
+</ul>
+<h3 id="multi-server-deployment">Multi-Server Deployment</h3>
+<ul>
+<li>Use <code>/server_id</code> endpoint to identify which server client is connected to</li>
+<li>Different servers have different <code>ID</code> values (auto-generated UUIDs)</li>
+<li>Each server maintains independent database and user list</li>
+<li>Plan for server discovery mechanism using beacon broadcasts</li>
+</ul>
+<hr />
+<h2 id="data-models">Data Models</h2>
+<h3 id="inholder">Inholder</h3>
+<p>Represents an item in the hierarchical storage system.</p>
+<pre><code class="language-python">{
+  &quot;placement_code&quot;: str,            # Hierarchical identifier (e.g., &quot;A-1-B&quot;)
+                                     # Empty string &quot;&quot; represents the root
+                                     # Format: uppercase alphanumeric and hyphens only
+  &quot;name&quot;: str,                       # Display name (required)
+  &quot;description&quot;: str,                # Description text (optional)
+  &quot;keywords&quot;: str,                   # Searchable keywords, typically comma-separated (optional)
+  &quot;children_arrangement&quot;: str,       # Layout/arrangement setting for child items (optional)
+  &quot;self_alignment&quot;: str,             # Alignment setting for this item (optional)
+  &quot;color&quot;: str,                      # Color value for UI representation (optional)
+  &quot;has_map_image&quot;: bool,             # Whether a map/layout image is stored
+  &quot;has_description_image&quot;: bool      # Whether a description image is stored
+}
+</code></pre>
+<p><strong>Placement Code Rules:</strong></p>
+<ul>
+<li>Must be uppercase alphanumeric ASCII and hyphens only</li>
+<li>Segments are separated by hyphens (e.g., <code>A</code>, <code>A-1</code>, <code>A-1-B</code>)</li>
+<li>Empty string is reserved for the root inholder</li>
+<li>Parent of placement code <code>A-1-B</code> is <code>A-1</code></li>
+</ul>
+<hr />
+<h3 id="user">User</h3>
+<p>Represents a user account with authentication and permissions.</p>
+<pre><code class="language-python">{
+  &quot;id&quot;: str,                    # Unique user identifier (UUID)
+  &quot;username&quot;: str,              # Username for login
+  &quot;permissions&quot;: list[str]      # List of granted permissions
+                                 # Possible values: &quot;add&quot;, &quot;update&quot;, &quot;remove&quot;, &quot;rename_server&quot;
+}
+</code></pre>
+<p><strong>Note:</strong> User passwords are hashed with werkzeug.security.generate_password_hash and never exposed in API responses.</p>
+<hr />
+<h3 id="permission-system">Permission System</h3>
+<p>Available permissions that can be assigned to users:</p>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>"add"</code></td>
+<td>Can create new inholders via POST /add</td>
+</tr>
+<tr>
+<td><code>"update"</code></td>
+<td>Can modify existing inholders via PUT /update</td>
+</tr>
+<tr>
+<td><code>"remove"</code></td>
+<td>Can delete inholders via DELETE /remove</td>
+</tr>
+<tr>
+<td><code>"rename_server"</code></td>
+<td>Can update root inholder name via PUT /update_root</td>
+</tr>
+</tbody>
+</table>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
