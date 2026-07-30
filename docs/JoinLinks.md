@@ -1,4 +1,4 @@
-# Info
+# Join links info
 
 Join links can be used either as **QR codes** or as **URLs**. They contain the URL of the server, allowing users to connect to a server without manually entering the server address.
 

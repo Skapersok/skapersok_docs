@@ -1,0 +1,80 @@
+:root {
+    /* Brand */
+    --app-primary: #2196F3;
+    /* Colors.blue[500] */
+    --app-primary-variant: #1976D2;
+    /* Colors.blue[700] */
+    --app-secondary: #64B5F6;
+
+    /* Backgrounds / surfaces */
+    --app-background: #111418;
+    --app-surface: #1E293B;
+    --app-surface-variant: #334155;
+    --app-appbar-background: #1E293B;
+
+    /* Cards */
+    --app-card-border: #475569;
+
+    /* Text */
+    --app-on-primary: #FFFFFF;
+    --app-caption: rgba(255, 255, 255, 0.7);
+
+    /* Status */
+    --app-error: #E53935;
+    /* Red 600 approximation */
+    --app-success: #4CAF50;
+    /* Green 500 */
+}
+
+
+/* MkDocs Material theme overrides */
+
+/* Main colors */
+[data-md-color-scheme="slate"] {
+    --md-primary-fg-color: var(--app-primary);
+    --md-primary-fg-color--light: #42A5F5;
+    --md-primary-fg-color--dark: var(--app-primary-variant);
+
+    --md-accent-fg-color: var(--app-secondary);
+
+    /* Background */
+    --md-default-bg-color: var(--app-background);
+    --md-default-fg-color: var(--app-on-primary);
+
+    /* Surfaces */
+    --md-code-bg-color: var(--app-surface);
+    --md-footer-bg-color: var(--app-surface);
+}
+
+
+/* Header / app bar */
+.md-header {
+    background-color: var(--app-appbar-background);
+}
+
+
+/* Cards */
+.md-typeset .admonition,
+.md-typeset details {
+    border-color: var(--app-card-border);
+}
+
+
+/* Links */
+.md-typeset a {
+    color: var(--app-primary);
+}
+
+.md-typeset a:hover {
+    color: #42A5F5;
+}
+
+
+/* Success / error colors */
+.success {
+    color: var(--app-success);
+}
+
+.error {
+    color: var(--app-error);
+}
