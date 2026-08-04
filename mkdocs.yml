@@ -18,3 +18,15 @@ theme:
 
 extra_css:
   - stylesheet/extra.css
+
+nav:
+  - Home: index.md
+  - Introduction: introduction.md
+  - Getting Started:
+      - App Setup: getting_started/app_setup.md
+      - Server Setup: getting_started/server_setup.md
+  - The Skapersøk System:
+      - Placementcodes: PlacementCode.md
+      - Gridsystem: Gridsystem.md
+      - Join links: JoinLinks.md
+      - API Reference: APIReference.md
