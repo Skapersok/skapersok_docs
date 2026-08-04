@@ -21,12 +21,22 @@ extra_css:
 
 nav:
   - Home: index.md
-  - Introduction: introduction.md
+  - Introduction: introduction
+
   - Getting Started:
-      - App Setup: getting_started/app_setup.md
-      - Server Setup: getting_started/server_setup.md
+      - Overview: getting_started
+      - App Setup: getting_started/app_setup
+      - Server Setup: getting_started/server_setup
+
   - The Skapersøk System:
-      - Placementcodes: PlacementCode.md
-      - Gridsystem: Gridsystem.md
-      - Join links: JoinLinks.md
-      - API Reference: APIReference.md
+      - Placement Codes: system/placement_codes
+      - Grid System: system/grids
+
+  - Usage:
+      - Join Links: JoinLinks
+
+  - Developer:
+      - Overview: developer
+      - API Reference: developer/APIReference
+      - Database layout: developer/database_layout
+      - Database setup: developer/database_setup
