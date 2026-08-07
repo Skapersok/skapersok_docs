@@ -6,6 +6,8 @@ theme:
   language: en
   logo: assets/images/logo.png
   favicon: assets/images/logo.png
+  features:
+    - navigation.footer
   palette:
     - scheme: slate
       toggle:
@@ -18,6 +20,13 @@ theme:
 
 extra_css:
   - stylesheet/extra.css
+
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
 
 nav:
   - Home: index.md
