@@ -42,10 +42,15 @@ nav:
       - Grid System: system/grids.md
 
   - Usage:
-      - Overview: usage/index.md
-      - Editing: usage/editing.md
-      - Backups: usage/backups.md
-      - Join Links: usage/join_links.md
+      - Creating a new crate: usage/create_crate.md
+      - Editing a crate: usage/edit_crate.md
+      - Deleting a crate: usage/delete_crate.md
+      - Generating labels: usage/generate_labels.md
+
+  - Interfaces:
+      - Search Page: interfaces/search_page.md
+      - Admin panel: interfaces/admin_panel.md
+      - Browse Page: interfaces/browse_page.md
 
   - Developer:
       - Overview: developer/index.md
