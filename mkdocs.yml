@@ -43,6 +43,7 @@ nav:
 
   - Usage:
       - Overview: usage/index.md
+      - Editing: usage/editing.md
       - Backups: usage/backups.md
       - Join Links: usage/join_links.md
 
